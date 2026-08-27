@@ -1,0 +1,2 @@
+import {NavLink} from "react-router-dom";
+export default function Navbar(){const links=[["/","Dashboard"],["/books","Books"],["/members","Members"],["/issue","Issue Book"],["/transactions","Transactions"]];return <header className="navbar"><div className="brand"><span className="brand-icon">📚</span><div><h1>Library Management System</h1><p>MERN Stack Project</p></div></div><nav>{links.map(([to,label])=><NavLink key={to} to={to} end={to==="/"} className={({isActive})=>isActive?"nav-link active":"nav-link"}>{label}</NavLink>)}</nav></header>}
